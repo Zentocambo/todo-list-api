@@ -1,0 +1,175 @@
+Absolutely 😏❤️ Here's a playful one that flirts with Noch without being too intense. It has a cute “Are you sure?” button that moves around a little.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For Noch 😏❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      width: 85%;
+      max-width: 450px;
+      padding: 35px;
+      text-align: center;
+      background: rgba(255,255,255,0.95);
+      border-radius: 30px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #ff3f70;
+      font-size: 38px;
+    }
+
+    p {
+      color: #555;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    button {
+      border: none;
+      border-radius: 30px;
+      padding: 14px 25px;
+      margin: 10px;
+      font-size: 17px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    #yes {
+      background: #ff3f70;
+      color: white;
+    }
+
+    #no {
+      background: #eee;
+      color: #555;
+      position: relative;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    #secret {
+      display: none;
+      color: #ff3f70;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      animation: float 5s linear forwards;
+    }
+
+    @keyframes float {
+      to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <h1>Hey Pov meas 😏❤️</h1>
+
+    <p>
+      Nik u klg klg
+    </p>
+
+    <p>
+      Dch jea u dl hx. 👀
+    </p>
+
+
+
+    <h2>Trv knea vinh ot? 😌</h2>
+
+    <button id="yes" onclick="yes()">Jg trv knea vinh <3</button>
+
+    <button id="no" onmouseover="runAway()">Ot jg :((</button>
+
+    <p id="secret"></p>
+
+  </div>
+
+  <script>
+
+    function yes() {
+
+      document.getElementById("secret").style.display = "block";
+
+      document.getElementById("secret").innerHTML =
+        "Okay then... first flirt: Bsl O bbe 😏❤️";
+
+      hearts();
+    }
+
+    function runAway() {
+
+      const button = document.getElementById("no");
+
+      const x = Math.random() * 250 - 125;
+      const y = Math.random() * 150 - 75;
+
+      button.style.transform =
+        `translate(${x}px, ${y}px)`;
+    }
+
+    function hearts() {
+
+      for (let i = 0; i < 25; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML =
+          ["❤️", "💕", "💗", "😘", "😏"][Math.floor(Math.random() * 5)];
+
+        heart.style.left =
+          Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+          (15 + Math.random() * 30) + "px";
+
+        heart.style.animationDuration =
+          (3 + Math.random() * 3) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+      }
+    }
+
+  </script>
+
+</body>
+</html>
+```
+
+ The **“No 🙈” button dodges the mouse**, so she basically has to deal with your flirting 😂❤️.
+
+ This one is designed so **Noch has to click through the surprise**, rather than immediately seeing the whole message. ❤️

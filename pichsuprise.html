@@ -1,0 +1,139 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Little Surprise ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #ff4f70;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        button {
+            background: #ff4f70;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff2f59;
+        }
+
+        #message {
+            display: none;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff1744;
+            font-size: 25px;
+            animation: float 4s linear infinite;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-10vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div id="start">
+            <h1>Hey Sweetheart ❤️</h1>
+
+            <p>
+                I made something small for you...
+            </p>
+
+            <button onclick="showMessage()">
+                Click for a surprise 💕
+            </button>
+        </div>
+
+        <div id="message">
+            <h1>For You ❤️</h1>
+
+            <p>
+                You the one who makes my day<3.
+                <br><br>
+                Anh yeu em Zoe belle<3.
+                <br><br>
+                I love you sm❤️
+            </p>
+
+            <h2>Em co yeu anh cong</h2>
+        </div>
+
+    </div>
+
+    <script>
+        function showMessage() {
+
+            document.getElementById("start").style.display = "none";
+            document.getElementById("message").style.display = "block";
+
+            // Create floating hearts
+            for (let i = 0; i < 20; i++) {
+
+                let heart = document.createElement("div");
+
+                heart.className = "heart";
+                heart.innerHTML = "❤️";
+
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration =
+                    (2 + Math.random() * 3) + "s";
+
+                document.body.appendChild(heart);
+
+                setTimeout(function() {
+                    heart.remove();
+                }, 5000);
+            }
+        }
+    </script>
+
+</body>
+</html>
+```
